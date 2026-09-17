@@ -115,11 +115,5 @@ QueueLess follows a clean healthcare-focused SaaS design with:
 
 The QueueLess frontend is designed to communicate with a separate backend API responsible for authentication, database operations, queue management, appointments, and other server-side functionality.
 
-
-## 📸 Screenshots
-
-Screenshots and project demonstrations will be added here as the project develops.
-
-## 📄 License
-
-This project is currently developed for educational and portfolio purposes.
+**Backend Repository:**
+https://github.com/raunak-collab/QueueLess-Backend
