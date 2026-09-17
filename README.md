@@ -1,62 +1,50 @@
-# QueueLess 🏥
+# QueueLess — Frontend 🏥
 
 **Smarter Queues. Happier Patients.**
 
-QueueLess is a modern healthcare queue management SaaS designed for clinics and healthcare centers. It helps manage patient queues, appointments, doctors, receptionists, and clinic operations from a centralized dashboard.
+QueueLess is a modern healthcare queue management SaaS frontend built to help clinics and healthcare centers manage patients, doctors, receptionists, appointments, and digital queues through a centralized interface.
 
-The goal of QueueLess is to reduce unnecessary waiting time and provide a smoother experience for both patients and healthcare staff.
+This repository contains the **frontend application** of QueueLess, built with Next.js, React, JavaScript, and Tailwind CSS.
 
 ## ✨ Features
 
-* 🏥 Clinic management
-* 👨‍⚕️ Doctor management
-* 👩‍💼 Receptionist management
-* 🧑‍🤝‍🧑 Patient management
-* 🎫 Digital queue and token management
-* 📅 Appointment management
-* 📊 Clinic dashboard and analytics
-* 🔐 Authentication and role-based access
-* 🌙 Light & dark theme
-* 📱 Responsive and modern UI
-* ⚡ Fast and optimized Next.js frontend
+* 🏥 Modern healthcare SaaS landing page
+* 🔐 Login & registration interfaces
+* 👥 Role-based user flow
+* 🏢 Clinic onboarding flow
+* 📊 Dashboard interface
+* 👨‍⚕️ Doctor management interface
+* 👩‍💼 Receptionist workflow
+* 🧑‍🤝‍🧑 Patient management interface
+* 🎫 Queue & token management UI
+* 📅 Appointment management UI
+* 🌙 Light & dark mode
+* 📱 Responsive design
+* ⚡ Fast Next.js application
 
 ## 👥 User Roles
 
-QueueLess is designed around multiple user roles:
+QueueLess supports interfaces for different types of users:
 
-* **Owner** — Manage clinic, staff, doctors, and overall operations
+* **Owner** — Manage clinic and staff
 * **Receptionist** — Manage patients, appointments, and queues
-* **Doctor** — View assigned patients and manage consultations
-* **Patient** — Join queues and track appointment/queue status
+* **Doctor** — View patients and manage consultations
+* **Patient** — Join queues and track queue status
 
 ## 🛠️ Tech Stack
 
-### Frontend
-
-* Next.js
-* React
-* JavaScript
-* Tailwind CSS
-* React Icons / Lucide Icons
-
-### Planned Backend
-
-* Node.js
-* Express.js
-* MongoDB
-* Mongoose
-* Socket.IO
-
-### Development & Deployment
-
-* Git
-* GitHub
-* Vercel
+* **Next.js**
+* **React**
+* **JavaScript**
+* **Tailwind CSS**
+* **Lucide Icons**
+* **Context API**
+* **Vercel**
 
 ## 📂 Project Structure
 
 ```text
-QueueLess/
+QueueLess-Frontend/
 ├── public/
 │   └── images/
 ├── src/
@@ -72,31 +60,31 @@ QueueLess/
 
 ## 🚀 Getting Started
 
-Clone the repository:
+### 1. Clone the repository
 
 ```bash
-git clone https://github.com/your-username/queueless.git
+git clone https://github.com/your-username/QueueLess-Frontend.git
 ```
 
-Navigate to the project:
+### 2. Navigate to the project
 
 ```bash
-cd queueless
+cd QueueLess-Frontend
 ```
 
-Install dependencies:
+### 3. Install dependencies
 
 ```bash
 npm install
 ```
 
-Start the development server:
+### 4. Start the development server
 
 ```bash
 npm run dev
 ```
 
-Open your browser and visit:
+The application will be available at:
 
 ```text
 http://localhost:3000
@@ -104,23 +92,34 @@ http://localhost:3000
 
 ## 🔐 Environment Variables
 
-Create a `.env.local` file in the root directory and add the required environment variables.
+Create a `.env.local` file in the project root:
 
 ```env
-# Add your environment variables here
+# Add frontend environment variables here
 ```
 
-> Never commit sensitive credentials, API keys, database URLs, or secrets to GitHub.
+Do not commit `.env.local` or any sensitive credentials to the repository.
 
-## 🎯 Project Goals
+## 🎨 Design
 
-QueueLess is being developed with a real-world SaaS architecture in mind.
+QueueLess follows a clean healthcare-focused SaaS design with:
 
-The main goals are to:
+* Minimal and modern interface
+* Clear navigation
+* Consistent spacing and typography
+* Light and dark themes
+* Accessible UI patterns
+* Dashboard-focused user experience
 
-* Reduce patient waiting time
-* Improve clinic workflow
-* Make queue management easier
-* Give healthcare staff a centralized management system
-* Provide patients with better visibility into their queue status
-* Build a scalable foundation for real-time queue updates
+## 🔗 Backend
+
+The QueueLess frontend is designed to communicate with a separate backend API responsible for authentication, database operations, queue management, appointments, and other server-side functionality.
+
+
+## 📸 Screenshots
+
+Screenshots and project demonstrations will be added here as the project develops.
+
+## 📄 License
+
+This project is currently developed for educational and portfolio purposes.
