@@ -1,36 +1,126 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# QueueLess 🏥
 
-## Getting Started
+**Smarter Queues. Happier Patients.**
 
-First, run the development server:
+QueueLess is a modern healthcare queue management SaaS designed for clinics and healthcare centers. It helps manage patient queues, appointments, doctors, receptionists, and clinic operations from a centralized dashboard.
+
+The goal of QueueLess is to reduce unnecessary waiting time and provide a smoother experience for both patients and healthcare staff.
+
+## ✨ Features
+
+* 🏥 Clinic management
+* 👨‍⚕️ Doctor management
+* 👩‍💼 Receptionist management
+* 🧑‍🤝‍🧑 Patient management
+* 🎫 Digital queue and token management
+* 📅 Appointment management
+* 📊 Clinic dashboard and analytics
+* 🔐 Authentication and role-based access
+* 🌙 Light & dark theme
+* 📱 Responsive and modern UI
+* ⚡ Fast and optimized Next.js frontend
+
+## 👥 User Roles
+
+QueueLess is designed around multiple user roles:
+
+* **Owner** — Manage clinic, staff, doctors, and overall operations
+* **Receptionist** — Manage patients, appointments, and queues
+* **Doctor** — View assigned patients and manage consultations
+* **Patient** — Join queues and track appointment/queue status
+
+## 🛠️ Tech Stack
+
+### Frontend
+
+* Next.js
+* React
+* JavaScript
+* Tailwind CSS
+* React Icons / Lucide Icons
+
+### Planned Backend
+
+* Node.js
+* Express.js
+* MongoDB
+* Mongoose
+* Socket.IO
+
+### Development & Deployment
+
+* Git
+* GitHub
+* Vercel
+
+## 📂 Project Structure
+
+```text
+QueueLess/
+├── public/
+│   └── images/
+├── src/
+│   ├── app/
+│   ├── components/
+│   ├── context/
+│   └── hooks/
+├── .gitignore
+├── package.json
+├── next.config.js
+└── README.md
+```
+
+## 🚀 Getting Started
+
+Clone the repository:
+
+```bash
+git clone https://github.com/your-username/queueless.git
+```
+
+Navigate to the project:
+
+```bash
+cd queueless
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open your browser and visit:
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+```text
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🔐 Environment Variables
 
-## Learn More
+Create a `.env.local` file in the root directory and add the required environment variables.
 
-To learn more about Next.js, take a look at the following resources:
+```env
+# Add your environment variables here
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+> Never commit sensitive credentials, API keys, database URLs, or secrets to GitHub.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🎯 Project Goals
 
-## Deploy on Vercel
+QueueLess is being developed with a real-world SaaS architecture in mind.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+The main goals are to:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+* Reduce patient waiting time
+* Improve clinic workflow
+* Make queue management easier
+* Give healthcare staff a centralized management system
+* Provide patients with better visibility into their queue status
+* Build a scalable foundation for real-time queue updates
