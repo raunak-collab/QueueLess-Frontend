@@ -63,7 +63,7 @@ QueueLess-Frontend/
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/your-username/QueueLess-Frontend.git
+git clone https://github.com/raunak-collab/QueueLess-Frontend.git
 ```
 
 ### 2. Navigate to the project
