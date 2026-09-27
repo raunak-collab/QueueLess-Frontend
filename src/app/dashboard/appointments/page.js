@@ -12,25 +12,17 @@ import {
   Mail,
   BarChart3,
   Settings,
-  Search,
-  Bell,
-  ChevronDown,
-  Menu,
-  X,
   CalendarPlus,
   Clock3,
   MoreHorizontal,
   CheckCircle2,
-  CircleDot,
   XCircle,
   CalendarClock,
-  UserRound,
   ChevronLeft,
   ChevronRight,
 } from "lucide-react";
 
 export default function AppointmentsPage() {
-  const [sidebarOpen, setSidebarOpen] = useState(false);
   const [view, setView] = useState("list");
 
   const menuItems = [
@@ -141,13 +133,6 @@ export default function AppointmentsPage() {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
-      {/* Mobile Overlay */}
-      {sidebarOpen && (
-        <div
-          className="fixed inset-0 z-40 bg-black/50 lg:hidden"
-          onClick={() => setSidebarOpen(false)}
-        />
-      )}
 
       {/* ================================================= */}
       {/* MAIN */}

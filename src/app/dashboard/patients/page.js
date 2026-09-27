@@ -122,7 +122,7 @@ export default function PatientsPage() {
                 <div className="p-5 md:p-8">
                     {/* Heading */}
                     <div className="mb-7">
-                        <h1 className="text-2xl font-semibold tracking-tight">
+                        <h1 className="text-2xl font-bold tracking-tight sm:text-3xl">
                             Patients
                         </h1>
                         <p className="mt-1 text-sm text-muted-foreground">

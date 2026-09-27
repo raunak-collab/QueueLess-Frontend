@@ -82,7 +82,8 @@ export default function Aside() {
             )}
 
             {/* Top Navbar */}
-            <header className="sticky top-0 z-30 ml-0 flex h-20 w-full items-center justify-between border-b border-border bg-background/90 px-4 backdrop-blur-xl sm:px-6 lg:ml-64 lg:w-[calc(100%-16rem)] lg:px-8">
+            <header className={`sticky top-0 ${sidebarOpen ? 'z-0': 'z-30'} ml-0 flex h-20 w-full items-center justify-between border-b border-border bg-background/90 px-4 backdrop-blur-xl sm:px-6 lg:ml-64 lg:w-[calc(100%-16rem)]
+                 lg:px-8`}>
                 <div className="flex items-center gap-3">
                     <button
                         onClick={() => setSidebarOpen(true)}
@@ -136,7 +137,7 @@ export default function Aside() {
 
             {/* Sidebar */}
             <aside
-                className={`fixed inset-y-0 left-0 z-0 flex w-64 flex-col border-r border-border bg-card transition-transform duration-300 overflow-y-scroll lg:translate-x-0 ${sidebarOpen ? "translate-x-0" : "-translate-x-full"
+                className={`fixed inset-y-0 left-0 z-50 flex w-64 flex-col border-r border-border bg-card transition-transform duration-300 overflow-y-scroll lg:translate-x-0 ${sidebarOpen ? "translate-x-0" : "-translate-x-full"
                     }`}
             >
                 {/* Logo */}
