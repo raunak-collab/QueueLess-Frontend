@@ -1,7 +1,14 @@
+import Image from "next/image";
 import Link from "next/link";
-import { IoLogoFacebook, IoLogoInstagram, IoLogoLinkedin, IoLogoTwitter } from "react-icons/io5";
+import { IoLogoLinkedin, IoLogoGithub } from "react-icons/io5";
 
 export default function Footer() {
+
+  const socialLink = [
+    { Icon: IoLogoLinkedin, Link: 'https://www.linkedin.com/in/raunak-raza-7172a1315/' },
+    { Icon: IoLogoGithub, Link: 'https://github.com/raunak-collab/' }
+  ]
+
   return (
     <footer className=" border-t border-border bg-slate-950 text-white dark:bg-black">
       <div className="mx-auto max-w-7xl px-5 py-14 sm:px-8">
@@ -11,29 +18,29 @@ export default function Footer() {
           {/* Brand */}
           <div className="lg:col-span-1">
             <Link href="/" className="flex items-center gap-2">
-              <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-primary font-bold">
-                Q
-              </div>
+              <span className="">
+                <Image src='/logo.png' height={40} width={40} alt="queueless" />
+              </span>
 
-              <span className="text-xl font-bold">
+              <span className="text-2xl font-bold tracking-tight text-white">
                 Queue<span className="text-primary">Less</span>
               </span>
             </Link>
-
             <p className="mt-5 max-w-xs text-sm leading-6 text-slate-400">
               Real-time queue and appointment management for modern
               healthcare.
             </p>
 
             <div className="mt-6 flex gap-3">
-              {[IoLogoFacebook, IoLogoInstagram, IoLogoLinkedin, IoLogoTwitter].map(
-                (Icon, index) => (
+              {socialLink.map(
+                ({ Icon, Link }, index) => (
                   <a
                     key={index}
-                    href="#"
+                    href={Link}
+                    target="_blank"
                     className="flex h-9 w-9 items-center justify-center rounded-lg border border-white/10 text-slate-400 transition hover:bg-white/10 hover:text-white"
                   >
-                    <Icon size={16} />
+                    <Icon size={20} />
                   </a>
                 )
               )}

@@ -4,13 +4,13 @@ import { Menu, Moon, Sun, X } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
 import { useTheme } from "@/hooks/useTheme";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import Image from "next/image";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const { dark, ToggleTheme } = useTheme();
-  const router = useRouter()
+  const pathname = usePathname()
 
   const links = [
     "Features",
@@ -19,14 +19,12 @@ export default function Navbar() {
     "About"
   ];
 
-  const handleScrollAndLink = (id) => {
-    if (id === 'about') {
-      return router.push('/about')
-    }
-    document.getElementById(id).scrollIntoView({ behavior: 'smooth' })
+
+  function navLink(link) {
+    return link.toLowerCase().replaceAll(' ', '-')
   }
 
-
+  console.log(pathname)
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-background/90 backdrop-blur-xl">
       <div className="mx-auto flex h-18 max-w-7xl items-center justify-between px-5 sm:px-8">
@@ -34,7 +32,7 @@ export default function Navbar() {
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2">
           <span className="">
-            <Image src='/logo.png' height={40} width={40} alt="queueless"/>
+            <Image src='/logo.png' height={40} width={40} alt="queueless" />
           </span>
 
           <span className="text-2xl font-bold tracking-tight text-foreground">
@@ -45,14 +43,14 @@ export default function Navbar() {
         {/* Desktop Navigation */}
         <nav className="hidden items-center gap-8 md:flex">
           {links.map((link) => (
-            <button
+            <Link
+              href={navLink(link)}
               type="button"
               key={link}
-              onClick={() => handleScrollAndLink(link.toLowerCase().replaceAll(' ', '-'))}
-              className="text-sm font-medium text-muted-foreground transition hover:text-foreground"
+              className={`text-sm font-medium ${pathname === `/${navLink(link)}` ? 'text-foreground' : 'text-muted-foreground hover:text-foreground'} transition`}
             >
               {link}
-            </button>
+            </Link>
           ))}
         </nav>
 
